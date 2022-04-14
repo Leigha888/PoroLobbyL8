@@ -17,7 +17,7 @@ async def createLobby(connection):
                     "id": 1
                 },
                 "spectatorPolicy": "AllAllowed",
-                "teamSize": 5,
+                "teamSize": 8,
             },
             "lobbyName": "League of Poro's Practice Tool",
             "lobbyPassword": ""
@@ -49,7 +49,7 @@ async def addBots(connection):
     # add bots to the player's team
     for id in ids[:4]:
         data = {
-            "botDifficulty": "EASY",
+            "botDifficulty": "INTERMEDIATE",
             "championId": id,
             "teamId": "100"
         }
@@ -58,7 +58,7 @@ async def addBots(connection):
     # add bots to the opposite team
     for id in ids:
         data = {
-            "botDifficulty": "EASY",
+            "botDifficulty": "INTERMEDIATE",
             "championId": id,
             "teamId": "200"
         }
